@@ -13,16 +13,13 @@ const QuestionsSchema = mongoose.Schema({
       }
   }],
   quizz: [{
-    quiz: {
+    
       type: mongoose.Schema.Types.ObjectId, 
       require: true,
       ref:"quiz"
-    }
+    
 }],
-//   correctAnswer: {
-//     type: String,
-//     required: true
-//   },
+
   createdAt: {
     type: Date,
     default: Date.now()

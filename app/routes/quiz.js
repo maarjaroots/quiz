@@ -16,7 +16,8 @@ router.get("/:token", (req, res) => {
   }
 
   quizSchema
-    .find({}).populate('questions.question')
+  .find()
+    //.find({}).populate('questions')
     .then((quiz) => res.json({ quiz, canViewAnswer, canEdit }))
     .catch((err) => res.status(400).json("Error: " + err));
 });
